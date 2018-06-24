@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12">
+    <div id="menubox" class="center-block">
+
+      <div class="box_central">
+        <img src="<%= @var_url %>" alt="">
+        <p><%= @secret %></p>
+      </div>
+      <div class="box_central">
+        <%= form_tag({controller: "tarea1", action: 'index'}, method: "get", class: "form-inline") do %>
+        <form class="form-inline">
+          <div class="form-group">
+            <label for="code">Codifo Verificación</label>
+            <input type="text" class="form-control" id="code" name="code" placeholder="Inserta tu código">
+          </div>
+          <button type="submit" class="btn btn-primary">Verificar</button>
+        <% end %>
+        <div class="">Resultado: Cierto o Falso</div>
+        <p><%= @result %></p>
+    </div>
+    </div>
+  </div>
+</div>

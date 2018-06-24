@@ -1,0 +1,6 @@
+docker run --rm --name flask_totp -ti -p 5001:5000 -e LC_ALL=C.UTF-8 -e LANG=C.UTF-8 -e FLASK_APP=totp.py -e FLASK_DEBUG=1 -w /home/Flask_Blog -v /Users/Manteca/local/totp/flask/web:/home/Flask_Blog fv_flask /bin/bash
+docker exec -ti flask_totp /bin/bash
+cd home/Flask_App/
+
+flask run --host=0.0.0.0 OR /
+ python3 totp.py

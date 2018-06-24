@@ -1,0 +1,25 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="box_central">
+  <img src="{{url_for('static', filename='uca.svg') }}" alt="">
+  <p>{{ secret }}</p>
+</div>
+<div class="box_central">
+  <form action="" method="POST">
+
+  <form class="form-inline">
+    <div class="form-group">
+      {{ form.totp_code.label(class="form-action-label") }} ({{ topt }})
+      {{ form.totp_code(class="form-control form-control-lg is-invalid") }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  <div class="">Resultado: Cierto o Falso</div>
+  <p>{{ result }}</p>
+</div>
+
+
+{% endblock content %}
