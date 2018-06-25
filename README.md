@@ -2,3 +2,5 @@
 
 * Ruby On Rails ( update version to FIX vulnerabilities in your dependencies)
 * Flask (Not test yet)
+
+TODO: example like: https://authenticator.ppl.family/
